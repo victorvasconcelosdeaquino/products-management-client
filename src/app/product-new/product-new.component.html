@@ -1,0 +1,27 @@
+<div>
+  <h3>New Product</h3>
+</div>
+<form class="example-container" [formGroup]="productForm" (ngSubmit)="addProduct(productForm.value)">
+  <mat-form-field>
+    <input matInput name="description" placeholder="Description" formControlName="description">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput name="active" placeholder="Active" formControlName="active">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput name="manufactureDate" placeholder="Manufacture Date" formControlName="manufactureDate">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput name="expiryDate" placeholder="Expiry Date" formControlName="expiryDate">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput name="supplier" placeholder="Supplier" formControlName="supplier">
+  </mat-form-field>
+  <br>
+  <br>
+  <button type="submit" [disabled]="!productForm.valid" mat-button collor="primary">Save</button>
+</form>
